@@ -1,0 +1,11 @@
+html{
+    background-color: pink;
+}
+
+.Recipe{
+    background-color: white;
+    width: 50%;
+}
+td{
+    border: 1px solid black;
+}
