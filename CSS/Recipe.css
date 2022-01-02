@@ -2,9 +2,20 @@ html{
     background-color: pink;
 }
 
+
+@media only screen and (max-width: 600px) {
+    .Recipe{
+        background-color: white;
+        width: 100%;
+    }
+    td{
+        border: 1px solid black;
+    }
+}
+
 .Recipe{
     background-color: white;
-    width: 50%;
+    width: 50vw;
 }
 td{
     border: 1px solid black;

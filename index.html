@@ -9,10 +9,21 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+            });
+    </script>
     <h1>Index of Recipes</h1>
+    <p>Use the textbox below to filter recipes!</p>
+    <input id="myInput" type="text" placeholder="Search..">
     <table>
-        <head>
+        <thead>
             <tr>
                 <th>Category</th>
                 <th>Recipe Name</th>
@@ -21,12 +32,14 @@
                 <th>Family Rating</th>
                 <th>View Recipe</th>
             </tr>
+        </thead>
+        <tbody id="myTable">
             <tr>
                 <td>Soup</td>
                 <td>Zuppa Toscana</td>
                 <td>10 Minutes</td>
                 <td>30 Minutes</td>
-                <td>?/5</td>
+                <td>5/5</td>
                 <td><button onClick="window.location.href='./Soup/CCZuppa.html'">View</button></td>
             </tr>
             <tr>
@@ -34,7 +47,7 @@
                 <td>Big Mac Salad</td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>4.5/5</td>
                 <td><button onClick="window.location.href='./Salad/BigMac.html'">View</button></td>
             </tr>
             <tr>
@@ -42,7 +55,7 @@
                 <td>Bacon, Egg & Cheese Biscuits</td>
                 <td></td>
                 <td>25 Minutes</td>
-                <td></td>
+                <td>Not Yet Made</td>
                 <td><button onClick="window.location.href='./Breakfast/BECBiscuit.html'">View</button></td>
             </tr>
             <tr>
@@ -50,7 +63,7 @@
                 <td>Seven-Layer Salad</td>
                 <td></td>
                 <td></td>
-                <td>Party Dish?</td>
+                <td></td>
                 <td><button onClick="window.location.href='./Salad/SLS.html'">View</button></td>
             </tr>
             <tr>
@@ -58,7 +71,7 @@
                 <td>Lady Finger Cheesecake</td>
                 <td>1.5 Hours</td>
                 <td>N/A</td>
-                <td></td>
+                <td>5/5</td>
                 <td><button onClick="window.location.href='./Dessert/LadyFinger.html'">View</button></td>
             </tr>
             <tr>
@@ -109,14 +122,23 @@
                 <td></td>
                 <td><button onClick="window.location.href = './Breakfast/CoffeeMuffins.html'">View</button></td>
             </tr>
-            
-        </head>
-        <body>
-
-        </body>
+            <tr>
+                <td>Dessert</td>
+                <td>Pecan Pie Cheesecake</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button onClick="window.location.href = './Dessert/PecanChzCk.html'">View</button></td>
+            </tr>
+            <tr>
+                <td>Chicken</td>
+                <td>Chicken Croquettes</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button onClick="window.location.href = './Chicken/ChxCroquettes.html'">View</button></td>
+            </tr>
+        </tbody>
     </table>
-    <div id="IFRAMEDIV" class="iframe">
-        <iframe src="" frameborder="0"></iframe>
-    </div>
 </body>
 </html>
